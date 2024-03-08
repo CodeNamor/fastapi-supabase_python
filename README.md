@@ -1,89 +1,79 @@
-# Project Title
+# Python FastAPI Framework CRUD application
 
-One Paragraph of project description goes here
+This is a simple CRUD Restful API service that is built in Python and using the FASTAPI restful framework. This was developed in comparison to the Django and Flask Python frameworks to understand the nuances and differences in the frameworks and services. The interesting portion of this framework is that it is built upon the Open API standard in web development and the service builds the Swagger/Redoc information as part of the development process. 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
 ```
-Give examples
+Install Homebrew (optional)
+Install of Python 3
+Install Pip
+Install PIPENV
+Setup SUPABASE envionment
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+Clone the repository 
 
 ```
-Give the example
+git clone ....
 ```
 
-And repeat
-
+Setup Supabase and get API and AuthKey. Supabase is used, and it is much like Firebase with the only difference bing it is based in PostGres rather than a NoSQL. Once you have created an account you will need to grab the API key and URL from the API menu. Then create a users Table which this service will connect too. 
 ```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+https://supabase.com/
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
+install the requirements from the pip file
 
 ```
-Give an example
+pipenv install or pipenv install --dev
 ```
 
-## Deployment
+start the service
 
-Add additional notes about how to deploy this on a live system
+```
+uvicorn app.main:app --reload 
+```
+
+As Fast API is built on top of the Open API spec, what makes this fascinating is the ability to get the Swagger documentation right from debugging in the local environment. Once the above command is run you can hit your local URL and add docs to the end in order to get the swagger documentation.
+
+Swagger:
+```
+http://127.0.0.1:8000/docs
+```
+![SwaggerDocGenerated](./images/Swagger.png)
+
+Redoc: 
+```
+http://127.0.0.1:8000/redoc
+```
+
+![ReDocGenerated](./images/Redoc.png)
+
+OpenApiSpec:
+
+```
+http://127.0.0.1:8000/openapi.json
+```
+
+![OpenApiSpec](./images/OpenApiJson.png)
+
+
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [Python3](https://www.python.org/) - Programming Language used
+* [FastAPI](https://fastapi.tiangolo.com/) - Web Framework used
+* [SUPABASE](https://supabase.com/) - Database connection
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
-
+* **F. Derek Roman** - *Initial work* - [CodeNamor](https://github.com/CodeNamor)
