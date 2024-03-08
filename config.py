@@ -1,0 +1,2 @@
+url = "https://hzsnemspffwfrmfzuobh.supabase.co"
+api = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6c25lbXNwZmZ3ZnJtZnp1b2JoIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwOTgzMzIwMCwiZXhwIjoyMDI1NDA5MjAwfQ.NgveoyeXx49vuTUgH8It3tlFzimJITSz_5Ao-hI0AWU'
